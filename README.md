@@ -1,0 +1,1 @@
+# strar-rating-without-image
