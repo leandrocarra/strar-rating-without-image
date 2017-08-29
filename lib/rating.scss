@@ -1,0 +1,9 @@
+@import "../mixin/rating";
+
+.exemple-one {
+    @include showRatingStars();
+}
+
+.exemple-two {
+    @include showRatingStars($fontSize: 50px, $widthContainer: 500px);    
+}

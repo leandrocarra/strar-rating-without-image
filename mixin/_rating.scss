@@ -1,0 +1,249 @@
+//!
+//  # QUANDO USAR: Deve ser usado para mostrar o review com estrelas
+//  *
+//  * fontSize = Tamanho das estrelas
+//  * widthContainer = É a largura para o efeito centralizador tenha efeito
+//  *
+//  # COMO USAR o showRatingStars();
+//  *
+//  #! No HTML coloque
+//  *   <div class="classPai">
+//  *       <div class="rating-percent__empty">
+//  *            <div class="rating-percent__empty-star">&#9734;</div>
+//  *            <div class="rating-percent__empty-star">&#9734;</div>
+//  *            <div class="rating-percent__empty-star">&#9734;</div>
+//  *            <div class="rating-percent__empty-star">&#9734;</div>
+//  *            <div class="rating-percent__empty-star">&#9734;</div>
+//  *        </div>
+//  *        <div class="rating-percent__full">
+//  *            <div class="rating-percent__full-star">&#9733;</div>
+//  *            <div class="rating-percent__full-star">&#9733;</div>
+//  *            <div class="rating-percent__full-star">&#9733;</div>
+//  *            <div class="rating-percent__full-star">&#9733;</div>
+//  *            <div class="rating-percent__full-star">&#9733;</div>
+//  *        </div>
+//  *    </div>
+//  *
+//  #! No Css Coloque
+//  *
+//  *   .classPai {
+//  *       @include showRatingStars();
+//  *   }
+//  *
+//  * O que vai controlar a taxa de % de cada estrela é o JAVASCRIPT, que vai colocar INLINE o width ficando assim:
+//  * <div class="rating-percent__full-star" style="width: 20%">&#9733;</div>
+//  * <div class="rating-percent__full-star" style="width: 20%">&#9733;</div>
+//  * <div class="rating-percent__full-star" style="width: 7%">&#9733;</div>
+//  * <div class="rating-percent__full-star" style="width: 0%">&#9733;</div>
+//  * <div class="rating-percent__full-star" style="width: 0%">&#9733;</div>
+//  *
+
+@mixin showRatingStars($fontSize: 13px, $widthContainer: 185px) {
+    font-size: $fontSize;
+    overflow: hidden;
+    width: $widthContainer;
+    margin: 0 auto;
+
+    .rating-percent__empty {
+        position: relative;
+    }
+
+    .rating-percent__empty-star {
+        float: left;
+        color: #d8d8d8;
+    }
+
+    .rating-percent__full {
+        position: absolute;
+    }
+
+    .rating-percent__full-star {
+        float: left;
+        overflow: hidden;
+        width: 20%;
+        color: #FFCC03;
+    }
+}
+
+//!
+//  # QUANDO USAR: Deve ser usado para mostrar o review com a quantidade em numeros
+//  *
+//  * starHeight = Tamanho das estrelas
+//  * numberSize = Tamanho da font dos numeros
+//  *
+//  # COMO USAR o showRatingStarsCounter();
+//  * use igual ao showRatingStars();
+//  *
+
+@mixin showRatingStarsCounter($starHeight: 13px, $numberSize: 13px) {
+    font-size: $starHeight;
+    position: relative;
+    overflow: hidden;
+    .rating-percent__empty {
+        position: relative;
+        top: 1px;
+    }
+
+    .rating-percent__empty-star {
+        float: left;
+        color: $light-greyish;
+    }
+
+    .rating-percent__full {
+        position: absolute;
+        top: 1px;
+    }
+
+    .rating-percent__full-star {
+        float: left;
+        overflow: hidden;
+        color: #d8d8d8;
+    }
+    .rating-percent__numbers {
+        font-size: $numberSize;
+        position: relative;
+        left: 5px;
+        color: $warm-grey;
+    }
+}
+
+
+//!
+//  # QUANDO USAR: Deve ser usado para que o cliente possa votar
+//  *
+//  * fontSize = Tamanho das estrelas
+//  * widthContainer = É a largura para o efeito centralizador tenha efeito
+//  *
+//  # COMO USAR o toVoteStars();
+//  *
+//  #! No HTML coloque
+// <ul class="to-vote">
+//     <li class="to-vote__option">
+//         <label for="one-star" class="to-vote__bind">
+//             <span class="to-vote__star-empty">&#9733;</span>
+//         </label>
+//         <input type="radio" id="one-star" name="to-vote" value="1" />
+//     </li>
+//     <li class="to-vote__option">
+//         <label for="two-star" class="to-vote__bind">
+//             <span class="to-vote__star-empty">&#9733;</span>
+//         </label>
+//         <input type="radio" id="two-star" name="to-vote" value="2" />
+//     </li>
+//     <li class="to-vote__option">
+//         <label for="three-star" class="to-vote__bind">
+//             <span class="to-vote__star-empty">&#9733;</span>
+//         </label>
+//         <input type="radio" id="three-star" name="to-vote" value="3" />
+//     </li>
+//     <li class="to-vote__option">
+//         <label for="four-star" class="to-vote__bind">
+//             <span class="to-vote__star-empty">&#9733;</span>
+//         </label>
+//         <input type="radio" id="four-star" name="to-vote" value="4" />
+//     </li>
+//     <li class="to-vote__option">
+//         <label for="five-star" class="to-vote__bind">
+//             <span class="to-vote__star-empty">&#9733;</span>
+//         </label>
+//         <input type="radio" id="five-star" name="to-vote" value="5" />
+//     </li>
+// </ul>
+//  *
+//  #! No Css Coloque
+// .to-vote {
+//     @include toVoteStars();
+// }
+//  *
+//  * O JavaScript controla o efeito do hover e click da votacao
+//  * no ie 8 o efeito smooth nao será aplicado.
+
+@mixin toVoteStars($fontSize: 13px, $widthContainer: 230px) {
+    overflow: hidden;
+    width: $widthContainer;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    input[type=radio] {
+        display: none;
+    }
+
+    .to-vote__option {
+        float: left;
+    }
+
+    .to-vote__star-empty {
+        font-size: $fontSize;
+        cursor: pointer;
+        transition: all 80ms;
+        color: #FFCC03;
+    }
+
+    .to-vote__hover {
+        color: #d8d8d8;
+    }
+
+    .to-vote__star-empty:hover {
+        color: #d8d8d8 \9;
+    }
+}
+
+
+//!
+//  # QUANDO USAR: Deve ser usado para se mostrar apenas uma estrela
+//  *
+//  * fontSize = Tamanho das estrelas
+//  *
+//  # COMO USAR o singleStar();
+//  *
+//  #! No HTML coloque
+// <div class="rating-percent__single-star">
+//     <div class="rating-percent__star">&#9733;</div>
+// </div>
+
+@mixin singleStar($fontSize: 13px) {
+    text-align: center;
+    .rating-percent__star {
+        font-size: $fontSize;
+        padding: 3px 0;
+        color: #d8d8d8;
+    }
+}
+
+
+//!
+//  # QUANDO USAR: Deve ser usado para se mostrar graficamente a quantidade em % dos reviews
+//  *
+//  * colorInside = Cor do preenchimento em %
+//  *
+//  # COMO USAR o graphicRating();
+//  *
+//  #! No HTML coloque
+// <div class="QualquerClasse">
+//     <span class="graphic-size__empty"></span>
+//     <span class="graphic-size__full" style="width: 50%"></span>
+// </div>
+//
+//  * Quem controla a quantidade preenchida é o % no style in-line
+
+@mixin graphicRating($colorInside: #FFCC03) {
+    position: relative;
+    .graphic-size {
+        @include rounded(10px);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 6px;
+        margin-top: -6px;
+        padding: 2px 0;
+    }
+    .graphic-size__empty {
+        @extend .graphic-size;
+        width: 100%;
+        background-color: #d8d8d8;
+    }
+    .graphic-size__full {
+        @extend .graphic-size;
+        background-color: $colorInside;
+    }
+}

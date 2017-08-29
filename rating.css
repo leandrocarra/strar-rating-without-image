@@ -1,0 +1,53 @@
+.exemple-one {
+    font-size: 13px;
+    overflow: hidden;
+    width: 185px;
+    margin: 0 auto;    
+}
+
+.exemple-one .rating-percent__empty {
+    position: relative;
+}
+
+.exemple-one .rating-percent__empty-star {
+    float: left;
+    color: #d8d8d8;
+}
+
+.exemple-one .rating-percent__full {
+    position: absolute;
+}
+
+.exemple-one .rating-percent__full-star {
+    float: left;
+    overflow: hidden;
+    width: 20%;
+    color: #FFCC03;
+}
+
+.exemple-two {
+    font-size: 50px;
+    overflow: hidden;
+    width: 500px;
+    margin: 0 auto;    
+}
+
+.exemple-two .rating-percent__empty {
+    position: relative;
+}
+
+.exemple-two .rating-percent__empty-star {
+    float: left;
+    color: #d8d8d8;
+}
+
+.exemple-two .rating-percent__full {
+    position: absolute;
+}
+
+.exemple-two .rating-percent__full-star {
+    float: left;
+    overflow: hidden;
+    width: 20%;
+    color: #FFCC03;
+}
