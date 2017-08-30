@@ -32,6 +32,12 @@ como o gulp ou grunt por exemplo.
 
 Existem alguns mixins que vc pode utilizar, são eles: 
 
+```
+Parametros:
+$fontSize       = tamanho das estrelas;
+$widthContainer = Coloca uma largura para centralizar o container em relação a pagina;
+```
+
 ### Para mostrar o review só estrelas
 ```scss
 @mixin showRatingStars($fontSize: 13px, $widthContainer: 100px)
