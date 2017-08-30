@@ -134,3 +134,6 @@ $widthContainer = Coloca uma largura para centralizar o container em relação a
    @include singleStar();
 }
 ```
+
+## Exemplo
+* [JSFiddle](https://jsfiddle.net/r2kk3553/1/)
