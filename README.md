@@ -36,7 +36,7 @@ Existem alguns mixins que vc pode utilizar, são eles:
 ```scss
 @mixin showRatingStars($fontSize: 13px, $widthContainer: 100px)
 ```
-## No html coloque
+##### No html coloque
 ```html
 <div class="qualquerClasse">
     <div class="rating-percent__empty">
@@ -55,7 +55,7 @@ Existem alguns mixins que vc pode utilizar, são eles:
     </div>
 </div>
 ```
-## no css utlize
+##### no css utlize
 ```css
 .qualquerClasse {
     @include showRatingStars();
@@ -64,9 +64,9 @@ Existem alguns mixins que vc pode utilizar, são eles:
 
 ### Para dar a opção de voto
 ```scss
-@mixin toVoteStars($fontSize: 13px, $widthContainer: 230px)
+@mixin toVoteStars($fontSize: 13px, $widthContainer: 200px)
 ```
-## No html coloque
+##### No html coloque
 ```html
 <ul class="qualquerClasse">
     <li class="to-vote__option">
@@ -101,7 +101,7 @@ Existem alguns mixins que vc pode utilizar, são eles:
     </li>
 </ul>
 ```
-## no css utlize
+##### no css utlize
 ```css
 .qualquerClasse {
    @include toVoteStars();
@@ -116,13 +116,13 @@ Existem alguns mixins que vc pode utilizar, são eles:
 ```scss
 @mixin singleStar($fontSize: 13px)
 ```
-## No html coloque
+##### No html coloque
 ```html
 <div class="rating-percent__single-star">
     <div class="rating-percent__star">&#9733;</div>
 </div>
 ```
-## no css utlize
+##### no css utlize
 ```css
 .qualquerClasse {
    @include singleStar();
