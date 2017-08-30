@@ -13,11 +13,11 @@ como o gulp ou grunt por exemplo.
 ### Getting Started
 
 #### A porcentagem das estrelas está dividida da seguinte forma. 
-* 100/5 o que nos dá 5 estrelas de 20. 
+* 100%/5 o que nos dá 5 estrelas de 20%. 
 * Ou seja, cada estrela que tiver no *style inline* 20% será uma estrela full.
 
 * Por exemplo esse codigo equivale a 2.7 de rating 5 
-* ou poderia também equivaler a 27% de 50 e assim por diante.
+* ou poderia também equivaler a 47% de 100% e assim por diante.
 
 ```html
 <div class="rating-percent__full-star" style="width: 20%">&#9733;</div>
@@ -32,7 +32,7 @@ como o gulp ou grunt por exemplo.
 
 Existem alguns mixins que vc pode utilizar, são eles: 
 
-* Para mostrar o review só estrelas
+### Para mostrar o review só estrelas
 ```scss
 @mixin showRatingStars($fontSize: 13px, $widthContainer: 100px)
 ```
@@ -62,7 +62,7 @@ Existem alguns mixins que vc pode utilizar, são eles:
 }
 ```
 
-* Para dar a opção de voto
+### Para dar a opção de voto
 ```scss
 @mixin toVoteStars($fontSize: 13px, $widthContainer: 230px)
 ```
@@ -112,7 +112,7 @@ Existem alguns mixins que vc pode utilizar, são eles:
 
 
 
-* Para mostrar apenas uma estrela
+### Para mostrar apenas uma estrela
 ```scss
 @mixin singleStar($fontSize: 13px)
 ```
