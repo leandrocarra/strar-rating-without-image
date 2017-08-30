@@ -12,7 +12,9 @@ como o gulp ou grunt por exemplo.
 
 ### Getting Started
 
-#### A porcentagem das estrelas está dividido da seguinte forma. 100/5 o que nos dá 5 estrelas de 20. Ou seja, cada estrela que tiver no style inline 20% será uma estrela full.
+#### A porcentagem das estrelas está dividida da seguinte forma. 
+* 100/5 o que nos dá 5 estrelas de 20. 
+* Ou seja, cada estrela que tiver no *style inline* 20% será uma estrela full.
 
 * Por exemplo esse codigo equivale a 2.7 de rating 5 
 * ou poderia também equivaler a 27% de 50 e assim por diante.
